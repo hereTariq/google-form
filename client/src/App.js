@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import LandingPage from './components/pages/LandingPage';
 import LoginPage from './components/pages/LoginPage';
 import RegisterPage from './components/pages/RegisterPage';
-import ForgetPasswordPage from './components/pages/ForgetPasswordPage';
+// import ForgetPasswordPage from './components/pages/ForgetPasswordPage';
 import CreateForm from './components/pages/CreateForm';
 import ResponseForm from './components/pages/ResponseForm';
 import Forms from './components/pages/Forms';

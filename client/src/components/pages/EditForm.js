@@ -1,17 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { PlusCircleIcon, TrashIcon } from '@heroicons/react/outline';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import {
-    CreateFormAPI,
-    updateFormAPI,
-    GetFormAPI,
-} from '../../utils/APIRoutes';
+import { updateFormAPI, GetFormAPI } from '../../utils/APIRoutes';
 import callAPI from '../../utils/fetchData';
 import Navbar from './Navbar';
 
-export default function EditForm({ setFormData }) {
+export default function EditForm() {
     const { id } = useParams();
     const navigate = useNavigate();
     const toastOptions = {

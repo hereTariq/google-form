@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { PlusCircleIcon, TrashIcon } from '@heroicons/react/outline';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { CreateFormAPI, GetUserAPI } from '../../utils/APIRoutes';
+import { CreateFormAPI } from '../../utils/APIRoutes';
 import Navbar from './Navbar';
 
 export default function CreateForm() {
@@ -282,12 +282,6 @@ export default function CreateForm() {
                         <button onClick={() => addQuestion()}>
                             <PlusCircleIcon className="w-6 h-6 sm:w-8 sm:h-8 text-gray-400 hover:text-indigo-500" />
                         </button>
-                        {/* <button onClick={() => addQuestion()}>
-                        <PlusCircleIcon className="w-8 h-8 text-gray-400 hover:text-indigo-500" />
-                    </button>
-                    <button onClick={() => addQuestion()}>
-                        <PlusCircleIcon className="w-8 h-8 text-gray-400 hover:text-indigo-500" />
-                    </button> */}
                     </div>
                     <button
                         className="mb-4 bg-indigo-600 px-4 py-2 hover:bg-indigo-700 rounded-md text-white"

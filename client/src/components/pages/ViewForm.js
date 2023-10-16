@@ -1,27 +1,20 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useNavigate, useParams } from 'react-router-dom';
-import { PlusCircleIcon, TrashIcon } from '@heroicons/react/outline';
-import { toast, ToastContainer } from 'react-toastify';
+import { useNavigate, useParams } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { GetFormAPI } from '../../utils/APIRoutes';
 import callAPI from '../../utils/fetchData';
 import Navbar from './Navbar';
 
-export default function EditForm({ setFormData }) {
+export default function EditForm() {
     const { id } = useParams();
     const navigate = useNavigate();
-    const toastOptions = {
-        position: 'bottom-right',
-        autoClose: 5000,
-        pauseOnHover: true,
-        theme: 'colored',
-        draggable: true,
-    };
+
     const [title, setTitle] = useState('Untitled Form');
     const [description, setDescription] = useState('Form Description');
     const [formContent, setFormContent] = useState([]);
     const [onEdit, setOnEdit] = useState(false);
-    const [textField, setTextField] = useState('');
+    // const [textField, setTextField] = useState('');
     const [editedField, setEditedField] = useState('');
 
     // let user;
